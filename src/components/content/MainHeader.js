@@ -1,5 +1,5 @@
 import React from "react";
-import Temp from "../../../Temp";
+import HeaderMenu from "./HeaderMenu";
 
 const MainHeader = ({data}) => {
   return (
@@ -69,7 +69,7 @@ const MainHeader = ({data}) => {
                         <div className="pane-content">
                           <div className="menu-block-wrapper menu-block-ctools-main-menu-1 menu-name-menu-main-menu-global-en parent-mlid-0 menu-level-1">
                             <ul className="menu">
-                              <Temp data={data} />
+                              <HeaderMenu data={data} />
                             </ul>
                           </div>
                         </div>
