@@ -1,0 +1,11 @@
+@charset "UTF-8";
+// 画像ズーム ====================
+.scrollzoom {
+  overflow: hidden;
+  img {
+    transition: all 0.5s;
+    &.active {
+      transform:scale(1.3);
+    }  
+  }
+}

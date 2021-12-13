@@ -1,0 +1,40 @@
+@charset "UTF-8";
+// カラー設定
+$color-base: #666;
+$color-link: #005bac;
+$color-visited: #333;
+
+// -Schneider Primary Colors
+$color-lifegreen: #3dcd58;
+$color-logogreen: rgb(0, 149, 48); // #009530 シュナイダーグリーン
+$color-logogreen80: rgba(0, 149, 48, 0.8); // #009530 80%透明
+$color-darkgray: rgb(98, 100, 105); // #626469
+$color-darkgray80: rgba(98, 100, 105, 0.8); // #626469 80%透明
+
+// -Schneider Secondary Colors
+$color-skyblue: rgb(66, 180, 230); //#42b4e6
+$color-skyblue80: rgba(66, 180, 230, 0.8); // #42b4e6 80%透明
+$color-lightgray: rgb(159, 160, 164); // #9fa0a4
+$color-lightgray80: rgba(159, 160, 164, 0.8); // #9fa0a4 80%透明
+$color-footergray: #e7e6e6;
+$color-bg-gray: #fafafa;
+
+// -Schneider Informational Colors
+$color-se-honeysuckle-orange: #e47f00;
+$color-se-fuchsia-red: #b10043;
+$color-se-sunflower-yellow: #ffd100;
+
+// -Proface Custom Colors
+$color-gray-mercury: #e0e0e0;
+$color-gray-title: #4d4d4d;
+$color-gray-h1title: #202020;
+$color-blue-main: #0051a6; // rgb(0, 81, 166)
+$color-blue-fun: #005bac;
+$color-orange: rgb(240,131,0);
+$color-orange-hover: rgb(255,158,41);
+
+// -border colors
+$color-gray-border: #d9d9d9;
+
+// -hover colors
+$color-gray-bg-hover: #f2f2f2;

@@ -1,0 +1,646 @@
+@charset "UTF-8";
+// Schneider シリーズ・製品仕様・バリエーション ====================
+// _add.scss 540
+// リンクに矢印を付ける ----------
+// -型式検索
+body.page-signaling-variation .proface-table-white .table {
+	.field-name-field-prd-sig-family a,
+	.field-name-field-prd-sig-series a {
+	  position: relative;
+	  padding-left: 1em;
+		&::before {
+		  position: absolute;
+		  top: 5px;
+		  left: 0;
+		  width: 6px;
+		  height: 6px;
+		  content: "";
+		  border-top: 2px solid $color-logogreen;
+		  border-right: 2px solid $color-logogreen;
+		  -webkit-transform: rotate(45deg);
+		  -ms-transform: rotate(45deg);
+		  transform: rotate(45deg);
+		}
+		&:visited {
+			color: $color-visited;
+			&::before {
+			  border-top-color: $color-visited;
+			  border-right-color: $color-visited;
+			}
+		}
+	}
+}
+
+// -variation
+.group-prd-basic-info {
+	.field-name-field-prd-sig-family .field-items a,
+	.field-name-field-prd-sig-series .field-items a {
+	  position: relative;
+	  padding-left: 1em;
+			&::before {
+		  position: absolute;
+		  top: 5px;
+		  left: 0;
+		  width: 6px;
+		  height: 6px;
+		  content: "";
+		  border-top: 2px solid $color-logogreen;
+		  border-right: 2px solid $color-logogreen;
+		  -webkit-transform: rotate(45deg);
+		  -ms-transform: rotate(45deg);
+		  transform: rotate(45deg);
+		}
+		&:visited {
+			color: $color-visited;
+			&::before {
+			  border-top-color: $color-visited;
+			  border-right-color: $color-visited;
+			}
+		}
+	}
+}
+
+// -製品仕様
+body.node-type-sig-variation {
+	.page-variations {
+		// 製品基本情報・推奨代替品表
+		fieldset {
+			a {
+			  position: relative;
+				padding-left: 1em;
+				text-decoration: underline;
+				&::before {
+					position: absolute;
+					top: 5px;
+					left: 0;
+					width: 6px;
+					height: 6px;
+					content: "";
+					border-top: 2px solid $color-logogreen;
+					border-right: 2px solid $color-logogreen;
+					-webkit-transform: rotate(45deg);
+					transform: rotate(45deg);
+				}
+				&:visited {
+					color: $color-visited;
+					&::before {
+					  border-top-color: $color-visited;
+					  border-right-color: $color-visited;
+					}
+					&:hover, &:focus {
+						color: $color-logogreen;
+						&::before {
+						  border-top-color: $color-logogreen;
+						  border-right-color: $color-logogreen;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// -関連資料
+	.field-name-field-prd-sig-document {
+		.field-label {
+			margin-bottom: 1em;
+		}
+		.field-items > div {
+			margin-bottom: 0.5em;
+		}
+		a {
+		  position: relative;
+			padding-left: 1.5em;
+			&::before, &::after {
+				content: "";
+				position: absolute;
+				left: 0;
+			}
+			&::before {
+				top: 0;
+				left: 0;
+				width: 14px;
+				height: 14px;
+				border: solid 1px $color-logogreen;
+			}
+			&::after {
+				top: 4px;
+				left: 2px;
+				width: 6px;
+				height: 6px;
+				border-top: 1px solid $color-logogreen;
+				border-right: 1px solid $color-logogreen;
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+// 検索結果が無い場合 #7063 #7196 ----------
+body.schneider,
+body.page-product-signaling-search {
+	.no-search-result {
+		a {
+	    background: $color-logogreen;
+	    border-color: $color-logogreen;
+			color: #fff;
+			&:hover {
+				background: #fff;
+				color: $color-logogreen;
+			}
+		}
+	}
+}
+
+// #5561 販売終了商品検索一覧・#7196 シグナリング型式検索とVariation ====================
+// _add.scss 695
+// Form ----------
+.product-end-of-sale-search-wrap {
+  display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 15px;
+	@include MQ(SM) {
+		display: flex;
+	}
+	@include MQ(XS) {
+		flex-direction: column;
+	}
+}
+
+// Table ----------
+body.panel-views-entity-table,
+body.page-product-signaling-search {
+	.proface-table-white {
+		.table {
+			border-bottom: solid 2px #999;
+			// -型式
+			tr:first-child {
+				td {
+				  font-size: 18px;
+				  font-weight: 700;
+				  background-color: #f2f2f2;
+				  white-space: nowrap;
+					a {
+					  position: relative;
+					  padding-left: 1em;
+						&::before {
+						  position: absolute;
+						  top: 7px;
+						  left: 0;
+						  width: 8px;
+						  height: 8px;
+						  content: "";
+						  -webkit-transform: rotate(45deg);
+						  -ms-transform: rotate(45deg);
+						  transform: rotate(45deg);
+						}
+					}
+				}
+			}
+			th {
+			  width: 25%;
+			  background-color: #ccc;
+			  border-bottom: solid 1px #fff;
+			  text-align: left;
+			  white-space: nowrap;
+			}
+			td {
+				text-align: left;
+				// -備考
+				.footnotes {
+				  display: block;
+				  margin-top: 0;
+				  margin-bottom: 0;
+				  padding: 0 0 0 1em;
+				  font-size: 14px;
+				}
+				a {
+				  position: relative;
+					padding-left: 1em;
+					text-decoration: underline;
+					&::before {
+						position: absolute;
+						top: 5px;
+						left: 0;
+						width: 6px;
+						height: 6px;
+						content: "";
+						border-top: 2px solid $color-logogreen;
+						border-right: 2px solid $color-logogreen;
+						-webkit-transform: rotate(45deg);
+						transform: rotate(45deg);
+					}
+					&:visited {
+						color: $color-visited;
+						&::before {
+						  border-top-color: $color-visited;
+						  border-right-color: $color-visited;
+						}
+						&:hover, &:focus {
+							color: $color-logogreen;
+							&::before {
+							  border-top-color: $color-logogreen;
+							  border-right-color: $color-logogreen;
+							}
+						}
+					}
+				}
+			}
+		}
+		.table-bordered {
+			margin-bottom: 0;
+			@include MQ(XS) {
+				margin-bottom: 15px;
+			}
+		}
+		.table-responsive {
+			margin-bottom: 10px;
+			@include MQ(XS) {
+				width: 100%;
+			}
+		}
+	}
+
+	// -推奨代替品
+	.field-name-field-prd-replace-1-ref,
+	.field-name-field-prd-replace-2-ref,
+	.field-name-field-prd-replace-3-ref,
+	.field-name-field-prd-replace-4-ref {
+		.field-items {
+			.field-item {
+				display: inline;
+				&::before {
+					content: ' + ';
+				}
+			}
+			div:first-child::before {
+				content: '';
+			}
+		}
+	}
+}
+
+// #5561 販売終了商品検索一覧 ====================
+// _add.scss 824
+// Form ----------
+.product-end-of-sale-search-wrap {
+	// -Software Category + Product Name
+	.facet-block {
+	  width: 30%;
+		@include MQ(SM) {
+	    display: inline-block;
+			width: 47%;
+	    padding-right: 0;
+		}
+		@include MQ(XS) {
+	    display: block;
+			width: 100%;
+		}
+		.pane-title {
+			margin: 0 0 5px;
+			line-height: 1.428571429;
+			color: #666;
+			font-weight: bold;
+			font-size: 14px;
+		}
+		// Facet
+		.item-list {
+			ul {
+				margin-bottom: 0;
+				list-style: none;
+				li {
+					margin-left: 0;
+					margin-bottom: 0;
+					padding: 6px 10px 6px 15px;
+					border: solid 1px #ccc;
+					.facetapi-active {
+						display: block;
+						width: 25px;
+						height: 17px;
+						text-indent: -9999px;
+						position: relative;
+						float: left;
+						background: url(/sites/all/themes/proface/img/compare_minus.svg) left center no-repeat;
+						background-size: 15px 15px;
+						margin-left: -6px;
+						&:hover {
+							background-image: url(/sites/all/themes/proface/img/compare_minus_on.svg);
+						}
+					}
+				}
+			}
+		}
+	}
+	.facet-first {
+		margin-right: 3%;
+		@include MQ(XS) {
+	    margin-right: 0%;
+		}
+	}
+
+	// -Model
+	.search-keyword {
+		width: 30%;
+		padding-right: 3%;
+		@include MQ(SM) {
+	    display: block;
+	    width: 100%;
+		}
+
+		.views-exposed-widgets {
+		  display: flex;
+		  -webkit-box-align: end;
+		  -ms-flex-align: end;
+		  align-items: flex-end;
+			@include MQ(SM) {
+				margin-bottom: 1em;
+			}
+			@include MQ(XXS) {
+				display: block;
+				margin-bottom: 1.5em;
+			}
+
+			.views-widget-filter-search_api_views_fulltext {
+			  float: none;
+			  align-self: flex-end;
+			  width: 70%;
+			  padding: 0;
+				@include MQ(SM) {
+					width: 80%;
+				}
+				@include MQ(XXS) {
+					width: 100%;
+				}
+			}
+
+			.views-submit-button {
+			  width: 30%;
+			  margin-top: 0;
+			  padding-right: 10px;
+			  padding-top: 0;
+				@include MQ(SM) {
+					width: 20%;
+					padding: 0;
+				}
+				@include MQ(XXS) {
+			    width: 100%;
+			    margin-top: 0.5em;
+				}
+				.form-submit {
+				  width: 100%;
+				  margin-top: 0;
+				}
+			}
+
+			.views-reset-button {
+			  width: 30%;
+			  margin-top: 0;
+			  padding: 0;
+				@include MQ(XXS) {
+			    width: 100%;
+			    margin-top: 1em;
+				}
+				.form-submit {
+				  width: 100%;
+				  margin-top: 0;
+				}
+			}
+		}
+	}
+
+	// -リセットボタン
+	.reset {
+		width: 100%;
+		a {
+			padding: 0 12px;
+			background-color: $color-blue-main;
+			border-color: #002a56;
+			color: #fff;
+			line-height: 34px;
+			&:hover, &:focus {
+				background-color: #3071a9;
+				border-color: #285e8e;
+			}
+		}
+	}
+}
+
+// Table ----------
+// -Proface blue
+body.panel-views-entity-table {
+	.proface-table-white {
+		.table {
+			caption {
+				display: none;
+			}
+			tr:first-child {
+				td {
+					a {
+						&::before {
+						  border-top: 2px solid $color-blue-main;
+						  border-right: 2px solid $color-blue-main;
+						}
+						&:visited {
+							color: $color-visited;
+							&::before {
+							  border-top-color: $color-visited;
+							  border-right-color: $color-visited;
+							}
+							&:hover, &:focus {
+								color: $color-logogreen;
+								&::before {
+								  border-top-color: $color-blue-main;
+								  border-right-color: $color-blue-main;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			td {
+				a {
+					&::before {
+						border-top-color: $color-blue-main;
+						border-right-color: $color-blue-main;
+					}
+					&:visited {
+						color: $color-visited;
+						&::before {
+						  border-top-color: $color-visited;
+						  border-right-color: $color-visited;
+						}
+						&:hover, &:focus {
+							color: $color-logogreen;
+							&::before {
+							  border-top-color: $color-blue-main;
+							  border-right-color: $color-blue-main;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// #7196 シグナリング型式検索とVariation ========================
+// _add.scss 1031
+.product-end-of-sale-search-wrap.signaling-search {
+	font-size: 16px;
+	.form-control {
+		height: 50px;
+		font-size: 16px;
+	}
+
+	.search-keyword {
+		width: 50%;
+		padding-right: 3%;
+		@include MQ(XS) {
+			width: 60%;
+		}
+		@include MQ(XXS) {
+			width: 100%;
+			padding-right: 0;
+		}
+		.views-exposed-widgets {
+			margin-bottom: 0;
+			@include MQ(SM) {
+				margin-bottom: 0;
+			}
+			.views-widget-filter-search_api_views_fulltext {
+				width: 100%;
+			}
+			.views-submit-button {
+				width: auto;
+				padding-right: 0;
+				@include MQ(XXS) {
+					width: 100%;
+				}
+				.form-submit {
+					height: 50px;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	.facet-block {
+		@include MQ(SM) {
+			width: 35%;
+			padding-right: 3%;
+		}
+		@include MQ(XS) {
+			width: 60%;
+			padding-top: 1em;
+		}
+		@include MQ(XXS) {
+			width: 100%;
+			padding-right: 0;
+		}
+		.form-group {
+			margin-bottom: 0;
+		}
+		.item-list {
+			ul {
+				li {
+					padding-top: 0;
+					padding-bottom: 0;
+					line-height: 50px;
+					a.facetapi-active {
+						top: 15px;
+						background: url(/sites/all/themes/proface/img/compare_minus_schneider.svg) left center no-repeat;
+						background-size: 15px 15px;
+						&:hover, &:focus {
+							background-image: url(/sites/all/themes/proface/img/compare_minus_on_schneider.svg);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// -#7490 リセットボタンを下に改行する
+	.reset {
+		width: 100%;
+		padding-top: 1em;
+		a {
+			padding: 0 12px;
+			background-color: $color-logogreen;
+			border-color: $color-logogreen;
+			color: #fff;
+			font-size: 16px;
+			line-height: 48px;
+			&:hover, &:focus {
+				background-color: $color-logogreen80;
+			}
+		}
+	}
+}
+
+body.page-product-signaling-search {
+	.product-end-of-sale-search-wrap .btn-primary {
+		background-color: $color-logogreen;
+		border-color: $color-logogreen;
+		&:hover {
+			background-color: $color-logogreen80;
+		}
+	}
+}
+
+// Table ----------
+// -schneider green
+body.page-product-signaling-search {
+	.proface-table-white {
+		.table {
+			tr:first-child {
+				td {
+					a {
+						color: $color-logogreen;
+						text-decoration: underline;
+						&::before {
+						  border-top: 2px solid $color-logogreen;
+						  border-right: 2px solid $color-logogreen;
+						}
+						&:visited {
+							color: $color-visited;
+							&::before {
+							  border-top-color: $color-visited;
+							  border-right-color: $color-visited;
+							}
+							&:hover, &:focus {
+								color: $color-logogreen;
+								&::before {
+								  border-top-color: $color-logogreen;
+								  border-right-color: $color-logogreen;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			td {
+				a {
+					&::before {
+						border-top-color: $color-logogreen;
+						border-right-color: $color-logogreen;
+					}
+					&:visited {
+						color: $color-visited;
+						&::before {
+						  border-top-color: $color-visited;
+						  border-right-color: $color-visited;
+						}
+						&:hover, &:focus {
+							color: $color-logogreen;
+							&::before {
+							  border-top-color: $color-logogreen;
+							  border-right-color: $color-logogreen;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

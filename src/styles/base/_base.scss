@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+// _style.scssから移動
+// 開発用 ====================
+body {
+  font-family: 'Helvetica','Helvetica Neue',Verdana,'Roboto','Arial',meiryo,'メイリオ','hiragino kaku gothic pro','ms pgothic', sans-serif;
+  color: #666;
+  margin-top: 120px;
+  @include MQ(XS) {
+    margin-top: 56px;
+    &.series-menu-xs-is-visible {
+      margin-top: 99px;
+    }
+  }
+}
+body .contextual-links-region .contextual-links-region {
+  .contextual-links-wrapper {
+    padding-right: 30px;
+    z-index: 2;
+  }
+  .contextual-links-region .contextual-links-wrapper {
+    padding-right: 60px;
+    z-index: 10;
+  }
+}
+
+// text base ====================
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Helvetica', 'Helvetica Neue',Verdana,'Roboto','Arial',meiryo,'メイリオ','hiragino kaku gothic pro','ms pgothic', sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #202020;
+}
+
+p {
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// custom.scssから移動
+a {
+  color: #005bac;
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+  &:visited {
+    color: #333;
+    text-decoration: underline;
+  }
+  img {
+    transition: 0.2s;
+    &:hover {
+      opacity: 0.8;
+      transition: 0.1s;
+    }
+  }
+}
+// style.scssから移動 mobile
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0,0.3);
+}
+button {
+  -webkit-tap-highlight-color: rgba(0,0,0,0.3);
+}
+
+img {
+  max-width: 100%;
+  height: auto!important;
+}

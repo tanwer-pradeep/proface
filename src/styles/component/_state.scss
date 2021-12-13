@@ -1,0 +1,38 @@
+// custom.scssから移動
+.attention1 {
+  padding: 9px 10px 8px 40px;
+  background: url(/sites/all/themes/proface/img-proface/attention_bg.svg) #f9e9da 10px 0.73em no-repeat;
+  background-size: 18px 18px;
+  color: $color-gray-title;
+  font-size: 14px;
+}
+p.attention1 {
+	margin: 1em 0;
+}
+
+.attention2 {
+  border: #f9e9da 1px solid;
+  color: $color-gray-title;
+  dt {
+    background: url(/sites/all/themes/proface/img-proface/attention_bg.svg) #f9e9da 10px 0.71em no-repeat;
+    background-size: 18px 18px;
+    padding: 9px 10px 8px 40px;
+    color: $color-gray-title;
+    font-size: 1.4rem;
+  }
+  dd {
+    padding: 20px 40px 20px 40px;
+    font-size: 1.4rem;
+    line-height: 1.9em;
+    p {
+      margin-bottom: 1.2em;
+      line-height: 1.7em;
+      &.red {
+        color: #ff0000;
+      }
+    }
+  }
+}
+p.attention2 {
+  margin: 1em 0;
+}

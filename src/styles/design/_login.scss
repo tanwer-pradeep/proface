@@ -1,0 +1,166 @@
+@charset "UTF-8";
+// style.scssから移動
+// ユーザープロフィールの「Registration information」を消す ====================
+.page-user .user-account-info .user-profile h3 {
+  display: none;
+  + dl {
+    margin-top: 20px;
+  }
+}
+
+// ユーザー登録フォームで、user/registerとuser/register/silverで表示するフィールドを制御する
+body {
+  &.page-user-register {
+    .field-name-field-usr-comp-office > *, .field-name-field-usr-familyname-local > *, .field-name-field-usr-firstname-local > *, .field-name-field-usr-nickname > *, .field-name-field-usr-salutation > *, .field-name-field-usr-gender > *, .field-name-field-usr-phone-mobile > *, .field-name-field-usr-country-address > *, .field-name-field-usr-city-local > *, .field-name-field-usr-city-alpha > *, .field-name-field-usr-street1-local > *, .field-name-field-usr-street1-alpha > *, .field-name-field-usr-street2-local > *, .field-name-field-usr-street2-alpha > *, .field-name-field-usr-postal-code > *, .field-name-field-usr-survey > *, .field-name-field-usr-pfj-newsletter-01 > * {
+      display: none;
+    }
+  }
+  &.page-user-register-silver {
+    .field-name-field-usr-comp-office > *, .field-name-field-usr-familyname-local > *, .field-name-field-usr-firstname-local > *, .field-name-field-usr-nickname > *, .field-name-field-usr-salutation > *, .field-name-field-usr-gender > *, .field-name-field-usr-phone-mobile > *, .field-name-field-usr-country-address > *, .field-name-field-usr-city-local > *, .field-name-field-usr-city-alpha > *, .field-name-field-usr-street1-local > *, .field-name-field-usr-street1-alpha > *, .field-name-field-usr-street2-local > *, .field-name-field-usr-street2-alpha > *, .field-name-field-usr-postal-code > *, .field-name-field-usr-survey > *, .field-name-field-usr-pfj-newsletter-01 > * {
+      display: block;
+    }
+    .field-name-field-usr-master-opt-in > * {
+      display: none;
+    }
+  }
+}
+
+// ユーザー登録時、言語設定を隠す ====================
+form#user-register-form #edit-locale {
+  display: none;
+}
+
+// User Registerのセカンダリーメニューを隠す ====================
+body.page-user-register .pane-pane-messages ul.secondary {
+  display: none;
+}
+
+// マイページ ====================
+.mypage-menu {
+  border: 1px solid rgb(240, 131, 80);
+}
+
+.mypage-menu-title {
+  background: rgb(240, 131, 80);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1.6rem;
+}
+
+.mypage-menu ul {
+  margin: 0;
+  padding: 20px 20px 15px 20px;
+  list-style: none;
+  overflow: hidden;
+  li {
+    float: left;
+    width: 33.3%;
+    margin: 0 0 5px 0;
+    a {
+      color: #2a6496 !important;
+      font-size: 1.5rem;
+      background: url(/sites/all/themes/proface/img-proface/feature_list1_bt.svg) left 0.25em no-repeat;
+      background-size: 0.8em 0.8em !important;
+      line-height: 1.5;
+      padding: 0 0 0 1.4em;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .mypage-menu ul li {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .mypage-menu ul li {
+    width: 50%;
+  }
+}
+
+@media (max-width: 540px) {
+  .mypage-menu ul {
+    li {
+      width: 100%;
+    }
+    padding: 15px 15px 10px 15px;
+  }
+}
+
+
+/* main profile部 */
+.user-account-info .profile2-main .content {
+  display: table;
+  width: 100%;
+  border-top: 1px solid #c0c0c0;
+  border-left: 1px solid #c0c0c0;
+  border-right: 1px solid #c0c0c0;
+  color: #333;
+  .field {
+    display: table-row;
+    .field-label {
+      display: table-cell;
+      float: none;
+      background: #dddddd;
+      padding: 10px;
+      font-size: 95%;
+      border-bottom: 1px solid #c0c0c0;
+      width: 200px;
+      vertical-align: top;
+    }
+    .field-items {
+      display: table-cell;
+      float: none;
+      padding: 10px;
+      font-size: 95%;
+      border-bottom: 1px solid #c0c0c0;
+      border-left: 1px solid #c0c0c0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .user-account-info .profile2-main .content .field {
+    .field-label, .field-items {
+      font-size: 85%;
+      padding: 8px;
+    }
+    .field-label {
+      width: 130px;
+    }
+  }
+}
+
+.software-user-register-button-wrapper {
+  margin-bottom: 20px;
+}
+
+.mypage-osusume {
+  h4 {
+    margin-top: 0;
+  }
+  .field-items {
+    font-size: 1.3rem;
+  }
+  .views-row.row {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mypage-osusume .views-row {
+    &.row {
+      margin-bottom: 0;
+      border: none;
+      padding-bottom: 0;
+    }
+    .views-column > div {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+    }
+  }
+}

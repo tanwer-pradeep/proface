@@ -1,0 +1,93 @@
+// navi - search API + solution ====================
+#compare-criteria, #views-exposed-form-news-panel-pane-2 {
+  margin-bottom: 20px;
+}
+#compare-criteria {
+  .panel-pane {
+    margin-bottom: 1.5rem;
+  }
+  .pane-title {
+    display: block;
+    background: #dddddd;
+    padding: 7px 15px;
+    line-height: 1.2;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .pane-content ul {
+    margin-bottom: 0;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding: 8px 5px;
+    list-style: none;
+    padding-left: 0;
+    li {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      &.last {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .form-item {
+    margin-bottom: 0;
+  }
+  .panel-pane .pane-content ul:last-child {
+    border-bottom: 1px solid #ccc;
+  }
+  .facetapi-select-submit {
+    display: none !important;
+  }
+  a.facetapi-active {
+    display: block;
+    width: 25px;
+    height: 17px;
+    text-indent: -9999px;
+    position: relative;
+    float: left;
+    background: url(/sites/all/themes/proface/img/compare_minus.svg) left center no-repeat;
+    background-size: 15px 15px;
+    margin-left: -6px;
+    &:hover {
+      background-image: url(/sites/all/themes/proface/img/compare_minus_on.svg);
+    }
+  }
+}
+
+// 更新情報 ====================
+#views-exposed-form-news-panel-pane-2 {
+  label {
+    display: block;
+    background: #dddddd;
+    padding: 7px 15px;
+    line-height: 1.2;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .views-exposed-form .views-exposed-widget {
+    padding: 0;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+  #edit-date-filter-wrapper {
+    margin-bottom: 0;
+    > label {
+      background: none;
+      padding-left: 0px;
+      &:before {
+        content: "\f111";
+        font-family: 'fontawesome';
+        color: #0051A6;
+      }
+    }
+    .form-item, input {
+      margin: 0;
+      width: 100%;
+    }
+  }
+  .views-submit-button, .views-reset-button {}
+  .views-submit-button input, .views-reset-button input {
+    margin-top: 0;
+    width: 100%;
+  }
+}

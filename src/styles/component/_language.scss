@@ -1,0 +1,16 @@
+@charset "UTF-8";
+// style.scssから移動
+// Multi Lang ====================
+// simplified chinese
+body.i18n-zh-hans,
+.i18n-zh-hans h1, .i18n-zh-hans h2, .i18n-zh-hans h3, .i18n-zh-hans h4, .i18n-zh-hans h5, .i18n-zh-hans h6,
+.i18n-zh-hans .h1, .i18n-zh-hans .h2, .i18n-zh-hans .h3, .i18n-zh-hans .h4, .i18n-zh-hans .h5, .i18n-zh-hans .h6 {
+  font-family: 'Helvetica Neue LT Pro','Helvetica', 'Helvetica Neue',Verdana,'Roboto','Arial', "Microsoft YaHei", "PingHei",'SimHei', sans-serif;
+}
+
+// traditional chinese
+body.i18n-zh-hant,
+.i18n-zh-hant h1, .i18n-zh-hant h2, .i18n-zh-hant h3, .i18n-zh-hant h4, .i18n-zh-hant h5, .i18n-zh-hant h6,
+.i18n-zh-hant .h1, .i18n-zh-hant .h2, .i18n-zh-hant .h3, .i18n-zh-hant .h4, .i18n-zh-hant .h5, .i18n-zh-hant .h6 {
+  font-family: 'Helvetica Neue LT Pro','Helvetica', 'Helvetica Neue',Verdana,'Roboto','Arial', STHeiti, 'Microsoft JhengHei', sans-serif;
+}

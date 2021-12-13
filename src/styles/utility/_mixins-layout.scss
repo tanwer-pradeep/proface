@@ -1,0 +1,33 @@
+@charset "UTF-8";
+// レスポンシブ幅設定
+// -bootstrap 
+@mixin BMQ($canvas) {
+  @if $canvas == XS {
+    @media (min-width: 768px) { @content; } 
+  }
+  @else if $canvas == SM {
+    @media (min-width: 992px) { @content; } 
+  }
+  @else if $canvas == MD {
+    @media (min-width: 1200px) { @content; } 
+  }
+}
+
+// -customize
+@mixin MQ($canvas) {
+  @if $canvas == XXS {
+    @media only screen and (min-width: 0px) and (max-width: 425px) { @content; } 
+  }
+  @else if $canvas == XS {
+    @media only screen and (max-width: 767px) { @content; } 
+  }
+  @else if $canvas == SM {
+    @media only screen and (max-width: 991px) { @content; } 
+  }
+  @else if $canvas == MD {
+    @media only screen and (max-width: 1199px) { @content; } 
+  }
+  @else if $canvas == LG {
+    @media screen and (min-width: 1200px) { @content; } 
+  }
+}

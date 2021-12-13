@@ -1,0 +1,770 @@
+@charset "UTF-8";
+//style.scssから移動
+// mobile ====================
+.img-responsive {
+  display: inline-block;
+}
+.table-responsive {
+  margin-bottom: 15px;
+  -webkit-overflow-scrolling: touch;
+  word-break: break-all;
+}
+div#proface-favorites {
+  text-align: right;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  div#proface-favorites form .btn {
+    width: auto;
+    display: inline-block;
+    clear: none;
+    margin: 0 0 10px;
+  }
+}
+
+// cancel border radius ====================
+.panel ,
+.panel-heading {
+  border-radius: 0!important;
+}
+
+// pagenation ====================
+.pagination > .active > {
+  a {
+    background-color: rgb(0, 81, 166);
+    border-color: $color-blue-main;
+    &:hover, &:focus {
+      background-color: rgb(0, 81, 166);
+      border-color: $color-blue-main;
+    }
+  }
+  span {
+    background-color: rgb(0, 81, 166);
+    border-color: $color-blue-main;
+    &:hover, &:focus {
+      background-color: rgb(0, 81, 166);
+      border-color: $color-blue-main;
+    }
+  }
+}
+
+// breadcrumbs ====================
+.breadcrumb {
+  background-color: #FFFFFF;
+  font-size: 1.2rem;
+  padding: 8px 0px;
+  a:visited {
+    color: $color-blue-main;
+  }
+}
+
+// 以下custom.scssから移動
+// free-html margin ====================
+.free-html p {
+  margin-bottom: 15px;
+  &:first-child {
+    margin-top:0;
+  }
+  &:last-child {
+    margin-bottom:0;
+  }
+}
+div.box {
+  margin-bottom: 15px;
+  &:first-child {
+    margin-top:0;
+  }
+  &:last-child {
+    margin-bottom:0;
+  }
+}
+
+// Unpubliehd時に背景色をつけない。コンテンツエリア横に赤い帯をつける。目印の文字画像は残す
+.node-unpublished {
+  background-color: white;
+  border-left: 10px solid red;
+  margin-left: -20px;
+  padding-left: 10px;
+}
+
+.page-node-draft .node-page {
+  background-color: white;
+  border-left: 10px solid red;
+  margin-left: -20px;
+  padding-left: 10px;
+}
+
+.page-node-revisions .node-page {
+  background-color: white;
+  border-left: 10px solid red;
+  margin-left: -20px;
+  padding-left: 10px;
+}
+
+// link_title ====================
+ul.link_title {
+	padding: 0;
+	margin: 0;
+}
+.link_title li {
+	color: #005bac;
+	font-size: 1.8rem;
+	width: 276px;
+	margin-bottom: 20px;
+	padding: 0 15px;
+	border-left: #005bac 4px solid;
+	display: inline-block;
+}
+
+// feature_list ====================
+dl.feature_list1, dl.feature_list2 {
+	margin: 0 0 1.5em 0;
+}
+.feature_list1,
+.feature_list2 {
+  dt {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 0 0 15px 0;
+    padding: 0 15px;
+  }
+  dd {
+    margin: 0 0 10px 0;
+    ul li {
+      color: #333333;
+      font-size: 1.4rem;
+      background-size: 0.9em 0.9em!important;
+      line-height: 1.5;
+      padding: 0 0 0 1.4em;
+      a {
+        color: #333333;
+        text-decoration: none;
+        &:hover, &:focus {
+          color: #333333;
+          text-decoration: underline; 
+        }
+      }
+    }
+  }
+  ul {
+    padding: 0px;
+    list-style: none;
+  }
+}
+.feature_list1 {
+  dt {
+    color: #005bac;
+    border-left: #005bac 4px solid;
+  }
+  dd {
+    ul li {
+      background: url(/sites/all/themes/proface/img-proface/feature_list1_bt.svg) left 0.33em no-repeat;
+    }
+  }
+}
+.feature_list2 {
+  dt {
+    color: #4BB4B6;
+    border-left: #4BB4B6 4px solid;
+  }
+  dd {
+    ul li {
+      background: url(/sites/all/themes/proface/img-proface/feature_list2_bt.svg) left 0.33em no-repeat;
+    }
+  }
+}
+
+// itemized_link ====================
+ul.itemized_link {
+  padding: 0;
+  list-style: none;
+}
+.itemized_link li {
+  color: #333;
+  font-size: 1.4rem;
+  vertical-align: middle;
+  background: url(/sites/all/themes/proface/img-proface/feature_list1_bt.svg) left 0.33em no-repeat;
+  line-height: 1.5;
+  padding: 0 0 0 1.4em;
+  margin: 0;
+  background-size: 0.9em 0.9em;
+  span.gray {
+    color: #333333;
+  }
+  a {
+    color: #003894;
+    text-decoration: none;
+    &:hover {
+      color: #90b1e3;
+      text-decoration: underline;
+    }
+  }
+}
+
+// numbered_list ====================
+.numbered_list {
+  font-size: 1.4rem;
+  margin-left: 0px;
+  list-style: decimal;
+  padding: 0px 0px 0px 25px;
+  li {
+    margin-bottom: 9px;
+    ul {
+      margin: 7px 0 13px 14px;
+      list-style-type: disc;
+      li {
+        font-size: 1.3rem;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+  ul {
+    padding: 0;
+  }
+}
+ol.numbered_list {
+  margin: 10px;
+}
+
+// 追従メニュー ====================
+// タイトル列記用
+.test_p {
+	margin: 50px 0 10px;
+}
+
+// link_tab
+.link_tab {
+	font-size:0em;
+	background-color: #ffffff;
+	width: 940px;
+  padding-top: 15px;
+  li {
+    color: #333333;
+    font-size: 14px; // リスト横のスペースをとるため
+    line-height: 17px;
+    text-align: center;
+    background: url(/sites/all/themes/proface/img-proface/link_tab_bg_off.png) center top no-repeat;
+    width: 252px;
+    margin: 0;
+    padding: 15px 30px;
+    display: inline-block;
+    vertical-align: top;
+    a {
+      color: #333333;
+      text-decoration: none;
+    }
+    &.roll {
+      text-decoration: none;
+      background: url(/sites/all/themes/proface/img-proface/link_tab_bg_on.png) center top no-repeat;
+      a {
+        color: #005bac;
+        text-decoration: none;
+      }
+    }
+  }
+  .on {
+    color: #005bac;
+    text-decoration: none;
+    background: url(/sites/all/themes/proface/img-proface/link_tab_bg_on.png) center top no-repeat;
+  }
+}
+ul.link_tab.clearfix {
+  padding: 15px 0px 0px 0px;
+}
+// タブ用 ====================
+.fixed {
+	position: fixed;
+	top: 0;
+	z-index: 99;
+}
+
+#no1, #no2, #no3, #no4, #no5 {
+	margin-top: 30px;
+}
+
+.link_tab2 li {
+	color: #333333;
+	font-size: 14px; // リスト横のスペースをとるため
+	line-height: 17px;
+	text-align: center;
+	background: url(/sites/all/themes/proface/img-proface/link_tab2_bg_off.png) center bottom no-repeat;
+	width: 130px;
+	margin-right: 18px;
+	padding: 10px 20px;
+	display: inline-block;
+  vertical-align: bottom;
+  &:last-child {
+	  margin-right: 0;
+  }
+  a {
+    color: #333333;
+    text-decoration: none;
+  }
+  &.roll {
+    text-decoration: none;
+    background: url(/sites/all/themes/proface/img-proface/link_tab2_bg_on.png) center bottom no-repeat;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+ul.link_tab2.clearfix {
+	padding: 15px 0px 0px 0px;
+}
+
+// note ====================
+.note {
+  color: #4d4d4d;
+  font-size: 14px;
+  background: url(/sites/all/themes/proface/img-proface/note_bt.svg) 0px 1.2em no-repeat;
+  background-size: 9px 9px;
+  padding: 10px 15px 10px 19px;
+  border-top: #cfd7eb 1px solid;
+  border-bottom: #cfd7eb 1px solid;
+}
+p.note {
+	margin: 1em 0;
+}
+
+// page_link
+// 2014/12/17追加 - 2016/02/08 page_link_high_oldに改名
+.page_link_high_old {
+  color: #005bac;
+  font-size: 17px;
+  vertical-align: middle;
+  background: url(/sites/all/themes/proface/img-proface/page_link_high_bt.svg) left 0.45em no-repeat;
+  background-size: 16px 16px;
+  padding: 2px 0 0 24px;
+  margin: 5px 0!important;
+  display: block;
+}
+
+.page_link_med {
+	display: inline-block;
+  margin: 8px 5px 8px 0;
+  a {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: #fff;
+    background: #005bac;
+    display: block;
+    padding: 0 8px 0 8px;
+    white-space: nowrap;  
+    border: 1px solid #005bac;
+    text-decoration: none!important;
+    &::after {
+      font-family: 'fontawesome';
+      content: '\f105';
+      margin-left: 10px;
+    }
+    &:hover, &:focus {
+      background: #fff;
+      color: #005bac;
+      text-decoration:none;
+      border: 1px solid #005bac;
+    }
+  }
+}
+
+.page_link_low {
+  display: inline-block;
+  margin: 8px 5px 8px 0;
+  &:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  a {
+    font-size: 1.0rem;
+    color: #005bac;
+    line-height: 2;
+    background: #fff;
+    display: block;
+    padding: 0 8px 0 8px;
+    white-space: nowrap;
+    border: 1px solid #005bac;
+    &:after {
+      font-family: 'fontawesome';
+      content: '\f105';
+      margin-left: 8px;
+    }
+    &:hover {
+      background: #005bac;
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid #005bac;
+    }
+  }
+}
+
+.page_link_exlow {
+  color: #005bac;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  background: url(/sites/all/themes/proface/img-proface/feature_list1_bt.svg) left 0.33em no-repeat;
+  padding: 0 0 0 1.4em;
+  margin: 0;
+  background-size: 0.9em 0.9em;
+  span.gray {
+    color: #333333;
+  }
+  a {
+    color: #003894;
+    text-decoration: none;
+    &:hover {
+      color: #003894;
+      text-decoration: underline;
+    }
+  }
+}
+
+// status ====================
+.status_high {
+	color: #fff;
+  font-size: 1.3rem;
+  line-height: 1.7;
+	background-color: #40BF8C;
+	padding: 0 10px;
+	display: inline-block;
+  margin: 0 5px 10px 0;
+  white-space: nowrap;
+  border: 1px solid #40bf8c;
+}
+.status_med {
+	color: #fff;
+  font-size: 1.3rem;
+  line-height: 1.7;
+	background-color: #888888;
+	padding: 0 8px;
+	display: inline-block;
+  margin: 0 5px 10px 0;
+  white-space: nowrap;
+    border: 1px solid #888888;
+}
+.status_low {
+	color: #888888;
+  font-size: 1.0rem;
+  line-height: 1.5;
+	padding: 0 6px;
+	border:#888888 1px solid;
+	display: inline-block;
+  margin: 0 5px 10px 0;
+  white-space: nowrap;
+}
+
+// view ====================
+.view360 {
+  display: inline-block;
+  margin: 5px 5px 5px 0!important;
+  a {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #fff;
+    background: url(/sites/all/themes/proface/img-proface/360_w.svg) 8px center no-repeat #005bac;
+    background-size: 1.4em 1.4em;
+    display: block;
+    padding: 0 0.5em 0 2.5em;
+    white-space: nowrap;
+    border: 1px solid #005bac;
+    &::after {
+      font-family: 'fontawesome';
+      content: '\f105';
+      margin-left: 10px;
+    }
+    &:hover {
+      background-color: #fff;
+      background-image: url(/sites/all/themes/proface/img-proface/360_blue.svg);
+      color: #005bac;
+      text-decoration:none;
+      border: 1px solid #005bac;
+    }
+  }
+}
+
+// 追加分 20160112 フジタ ====================
+.bordered-box-list {
+  padding: 20px 10px;
+  border: 1px solid #c9c9c9;
+  background: #f8f8f8;
+  margin-bottom: 20px;
+  text-align: center;
+  list-style: none;
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+// 追加分 20160114 フジタ ====================
+/**  20160208 更新 page_link_highex -> page_link_highに変更 **/
+a {
+  &.page_link_high, &.page_link_highex {
+    background: url(/sites/all/themes/proface/img/shevron-right-blue.svg) no-repeat 7px 0.65em #fff;
+    background-size: 10px 10px;
+    margin: 5px 0 !important;
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #005bac;
+    line-height: 1.3;
+    padding: 5px 10px 5px 23px;
+    border: 1px solid #005bac;
+  }
+  &.page_link_high {
+    &:hover, &:focus {
+      text-decoration: none;
+      background-image: url(/sites/all/themes/proface/img/shevron-right-white.svg);
+      background-color: #005bac;
+      color: #fff;
+    }
+  }
+  &.page_link_highex {
+    &:hover, &:focus {
+      text-decoration: none;
+      background-image: url(/sites/all/themes/proface/img/shevron-right-white.svg);
+      background-color: #005bac;
+      color: #fff;
+    }
+  }
+}
+
+p.page_link_high a {
+  background: url(/sites/all/themes/proface/img/shevron-right-blue.svg) no-repeat 7px 0.65em #fff;
+  background-size: 10px 10px;
+  margin: 5px 0 !important;
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #005bac;
+  line-height: 1.3;
+  padding: 5px 10px 5px 23px;
+  border: 1px solid #005bac;
+  &:hover, &:focus {
+    text-decoration: none;
+    background-image: url(/sites/all/themes/proface/img/shevron-right-white.svg);
+    background-color: #005bac;
+    color: #fff;
+  }
+}
+
+
+// 追加分 20160116 フジタ ====================
+.link-box {
+  background: url(/sites/all/themes/proface/img-proface/green-bg.png) center center;
+  background-size: 1200px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: table;
+  overflow: hidden;
+  width: 100%;
+  height: 80px;
+  &.lb-emerald {
+    background-image: url(/sites/all/themes/proface/img-proface/emerald-bg.png);
+  }
+  &.lb-orange {
+    background-image: url(/sites/all/themes/proface/img-proface/orange-bg.png);
+  }
+  &.lb-green {
+    background-image: url(/sites/all/themes/proface/img-proface/green-bg.png);
+  }
+  a {
+    padding: 0 50px 0 110px;
+    text-decoration: none !important;
+    color: #fff !important;
+    background-image: url(/sites/all/themes/proface/img-proface/pdf-min.png), url(/sites/all/themes/proface/img-proface/shevron-right-min.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 40px center, right 15px center;
+    background-size: 50px, 21px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+  }
+  &.lb-exclamation a {
+    background-image: url(/sites/all/themes/proface/img-proface/error-min.png), url(/sites/all/themes/proface/img-proface/shevron-right-min.png);
+  }
+  &.lb-check a {
+    background-image: url(/sites/all/themes/proface/img-proface/check-min.png), url(/sites/all/themes/proface/img-proface/shevron-right-min.png);
+  }
+  &.lb-pdf a {
+    background-image: url(/sites/all/themes/proface/img-proface/pdf-min.png), url(/sites/all/themes/proface/img-proface/shevron-right-min.png);
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  > a > span {
+    &:first-child {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      margin-right: 9px;
+      display: block;
+    }
+    &:nth-child(2) {
+      margin-top: 4px;
+      display: block;
+    }
+  }
+}
+@media (max-width: 680px) {
+  .link-box > a {
+    padding: 5px 30px 5px 58px;
+    background-position: 15px center, right 9px center;
+    background-size: 30px, 13px;
+    > span:first-child {
+      font-size: 2rem;
+    }
+  }
+}
+
+dl.text-box {
+  dt {
+    background-color: #0051ac;
+    color: #fff;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 9px 30px;
+    background-repeat: no-repeat;
+    background-position: 20px center;
+  }
+  &.tb-star dt {
+    background-image: url(/sites/all/themes/proface/img-proface/star-min.png);
+    background-size: 36px;
+    padding-left: 49px;
+    background-position: 11px center;
+  }
+  &.tb-tel dt {
+    background-image: url(/sites/all/themes/proface/img-proface/phone-min.png);
+    background-size: 23px;
+    padding-left: 49px;
+  }
+  dd {
+    border: 1px solid #0051ac;
+    padding: 20px 30px;
+  }
+}
+
+.item-blue {
+  color: #4d4d4d;
+  background: url(/sites/all/themes/proface/img-proface/h6_bt.svg) left 0.45em no-repeat;
+  padding: 0px 0 0 1.1em;
+  background-size: 0.6em 0.6em;
+}
+
+// Remarks 注釈 20160208　フジタ追加 ====================
+a.remarks-anchor {
+  color: red !important;
+  sup {
+    font-size: 1.2rem;
+  }
+}
+.remarks {
+  margin-top: 0x;
+  margin-bottom: 35px;
+  font-size: 1.20rem;
+  color: #888;
+  padding: 0 8px 0 11px;
+  p {
+    margin-bottom: 5px;
+  }
+  a {
+    color: red !important;
+    display: block;
+    float: left;
+  }
+}
+.remarks-data {
+  margin-left: 1.8em;
+  display: block;
+  a {
+    display: inline;
+    float: none;
+    color: #005bac !important;
+  }
+}
+
+// Google Mapレスポンシブ化 ====================
+.googlemaps {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// youtube 埋めこみレスポンシブ化 ====================
+iframe[src*="youtube"] {
+  max-width: 100% !important; /* これがないとロード時に一瞬横幅が広がる */
+  width:100%;
+  clear:both;
+}
+
+.YoutubeWrapper {
+  position: relative ;
+  margin-top: 1.2em ;
+  margin-bottom: 1.2em ;
+  padding-bottom:56.25%;
+  height: 0px;
+}
+
+.free-space .YoutubeWrapper {
+  margin-top:0;
+  margin-bottom: 0;
+}
+
+.YoutubeWrapper iframe {
+  position: absolute ;
+  top: 0 ;
+  left: 0 ;
+  height: 100%;
+  width: 100%;
+}
+
+// 外部サイトへリンクする場合のアイコン設定 ====================
+// add.scss から移動
+a.autolink > span.ext {
+	display: inline-block;
+	background: url(/sites/all/themes/proface/img/toiawase_icon.png) 0 bottom no-repeat;
+	background-size: 18px auto;
+	width: 20px;
+	height: 20px;
+	margin-left: 3px;
+}
+
+// 中央寄せ - 左寄せ　-　右寄せ ====================
+.text-center,
+.content-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+
+
+
+
+// margin ====================
+.mb_2 {
+  margin-bottom: 2rem;
+}
+.mb_3 {
+  margin-bottom: 3rem;
+}
+.mb_4 {
+  margin-bottom: 4rem;
+}
+.mb_5 {
+  margin-bottom: 5rem;
+}
+.mb_6 {
+  margin-bottom: 6rem;
+}

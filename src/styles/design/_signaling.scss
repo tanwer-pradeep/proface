@@ -1,0 +1,508 @@
+@charset "UTF-8";
+// #7063 シグナリング ====================
+// _add.scss 29
+/* ! Family (Series list) ---------- */
+// -メイン画像他
+body.panel-region-seriesmenu .node-sig-family {
+	margin-bottom: 30px;
+	.field-name-field-prd-sig-main-image {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-bottom: 9px;
+    padding-top: 6px;
+    padding-left: 22px;
+    border-left: 5px solid $color-logogreen;
+    border-bottom: 1px solid #ccc;
+		color: $color-gray-title;
+		@include MQ(XS) {
+			margin: 20px -15px 20px -15px;
+			padding: 10px 15px;
+			background-image: none;
+			background-color: $color-logogreen;
+			color: #fff;
+			text-align: center;
+			font-size: 2.0rem;
+		}
+	}
+}
+
+// -一覧表示
+.signaling-series-list .view-content {
+	display: flex;
+	flex-wrap: wrap;
+	@include MQ(SM) {
+		display: block;
+	}
+	.col-wrap {
+		position: relative;
+		margin-bottom: 25px;
+		padding: 15px 15px 10px 15px;
+		width: (100% - 3) / 2; // margin-left 3%
+		border: solid 1px $color-gray-mercury;
+		font-size: 0;
+		@include MQ(SM) {
+			width: 100%;
+		}
+		&:nth-child(2n) {
+			margin-left: 3%;
+			@include MQ(SM) {
+				margin-left: 0;
+			}
+		}
+
+		h3 {
+			margin: -15px -15px 15px -15px;
+			padding: 10px 15px;
+			background-color: $color-logogreen;
+			color: #fff;
+			font-size: 1.6rem;
+			font-weight: bold;
+			span {
+				display: block;
+				line-height: 1.5;
+			}
+			.type {
+			}
+			.name {
+				position: relative;
+				padding-left: 1em;
+				&::before {
+					position: absolute;
+					top: 7px;
+					left: 0;
+					width: 8px;
+					height: 8px;
+					margin: auto;
+					content: "";
+					border-top: 2px solid #fff;
+					border-right: 2px solid #fff;
+					transform: rotate(45deg);
+				}
+				a {
+					color: #fff;
+				}
+			}
+		}
+		.image {
+			margin-bottom: 15px;
+		}
+
+		.group-series-left, .group-series-right {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 1.6rem;
+			line-height: 1.6;
+		}
+		.group-series-left {
+			width: 40%;
+			line-height: 1.3;
+			.size, .decibel {
+				margin-bottom: 5px;
+				padding: 10px 5px;
+				background-color: $color-darkgray;
+				border-radius: 4px;
+				text-align: center;
+				color: #fff;
+				font-size: 1.8rem;
+			}
+			.color {
+				margin-bottom: 5px;
+			}
+			.supply .item {
+			  margin-bottom: 5px;
+			  padding: 5px;
+				background-color: $color-footergray;
+			  border-radius: 4px;
+			  text-align: center;
+			  color: #333;
+			  font-size: 1.8rem;
+			}
+			.tiers, .buzzer {
+				margin-bottom: 5px;
+				padding: 5px;
+				background-color: $color-footergray;
+				text-align: center;
+				border-radius: 4px;
+				color: #333;
+			}
+		}
+		.group-series-right {
+			width: 60%;
+			padding-left: 15px;
+			.container-inline { // dl
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				margin-bottom: 3px;
+				.title { // dt
+					position: relative;
+					margin-bottom: 3px;
+					padding-left: 9px;
+					font-size: 18px;
+					color: $color-logogreen;
+					.stock {
+						span {
+							display: none;
+						}
+						&::before {
+							position: absolute;
+							top: 0;
+							left: 0;
+							content: "●";
+							color: rgb(255, 0, 0);
+							font-size: 1.4rem;
+						}
+					}
+				}
+				.element { // dd
+					padding-left: 5px;
+					ul {
+						margin-bottom: 0;
+						padding-left: 0;
+						list-style: none;
+						font-size: 0;
+						li {
+							display: inline-block;
+							margin-right: 3px;
+							margin-bottom: 3px;
+							padding: 2px 3px;
+							background-color: $color-footergray;
+							border-radius: 4px;
+							line-height: 1.3;
+							color: #333;
+							font-size: 1.4rem;
+						}
+					}
+				}
+			}
+			.overview {
+				margin-top: 15px;
+				margin-bottom: 50px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				border-top: solid 1px $color-gray-mercury;
+				border-bottom: solid 1px $color-gray-mercury;
+			}
+			.mounting {
+				margin-top: -35px;
+				margin-bottom: 50px;
+				padding-bottom: 15px;
+				span {
+					padding-left: 10px;
+				}
+			}
+			.readmore {
+				position: absolute;
+				bottom: 20px;
+				right: 15px;
+				a {
+					position: relative;
+					padding: 10px 15px 10px 25px;
+					background-color: $color-skyblue;
+					color: #fff;
+					&:hover, &:focus {
+						background-color: $color-skyblue80;
+					}
+					&::before {
+						position: absolute;
+						top: 14px;
+						left: 10px;
+						width: 8px;
+						height: 8px;
+						margin: auto;
+						content: "";
+						border-top: 2px solid #fff;
+						border-right: 2px solid #fff;
+						transform: rotate(45deg);
+					}
+				}
+			}
+		}
+	}
+}
+
+// -side
+body.schneider {
+	#compare-criteria {
+		a.facetapi-active {
+			background-image: url(/sites/all/themes/proface/img/compare_minus_schneider.svg);
+			&:hover, &:focus {
+				background-image: url(/sites/all/themes/proface/img/compare_minus_on_schneider.svg);
+			}
+		}
+
+		.btn-default {
+			background-color: $color-logogreen;
+			border-color: $color-logogreen;
+			color: #fff;
+			&:hover, &:focus {
+				background-color: $color-logogreen80;
+			}
+		}
+	}
+}
+
+/* ! Series ---------- */
+// -タイトル
+.node-sig-series h2 {
+	position: relative;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding-left: 22px;
+  padding-bottom: 9px;
+  padding-top: 6px;
+	border-left: 5px solid $color-logogreen;
+  border-bottom: 1px solid #ccc;
+	color: $color-gray-title;
+  font-size: 2.5rem;
+	@include MQ(XS) {
+		margin: 20px -15px 20px -15px;
+		padding: 10px 15px;
+		background-image: none;
+		background-color: $color-logogreen;
+		color: #fff;
+		text-align: center;
+		font-size: 2.0rem;
+	}
+}
+
+// -シリーズ名
+h2.series-name {
+	margin-top: 0;
+	margin-left: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+	border: none;
+	color: $color-gray-h1title;
+	font-size: 1.8rem;
+	@include MQ(XS) {
+		background-image: none;
+		background-color: transparent;
+		text-align: left;
+	}
+}
+
+// -商品画像と説明
+.sig-series-main {
+	display: flex;
+	flex-wrap: nowrap;
+	@include MQ(XS) {
+		display: block;
+	}
+	.image {
+		width: 50%;
+		padding-right: 20px;
+		@include MQ(XS) {
+			width: 100%;
+			padding-right: 0;
+		}
+	}
+	.details {
+		width: 50%;
+		@include MQ(XS) {
+			width: 100%;
+		}
+		// -ブランド名
+		.brand {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 0;
+			margin-bottom: 10px;
+			padding-bottom: 10px;
+			border-bottom: dotted 1px #ccc;
+			span {
+				margin-left: 5px;
+				margin-bottom: 5px;
+				padding: 5px 10px;
+				background-color: $color-logogreen;
+				border-radius: 4px;
+				color: #fff;
+				font-size: 1.6rem;
+			}
+		}
+
+		//　-アイコン
+		.group-icon {
+			display: inline-flex;
+			align-items: center;
+			padding-left: 0;
+			list-style: none;
+			@include MQ(XS) {
+				flex-wrap: wrap;
+			}
+			li {
+				margin-left: 5px;
+				&:first-child {
+					margin-left: 0;
+				}
+				&.size, &.decibel {
+					margin-top: 5px;
+					margin-bottom: 5px;
+					padding: 15px 30px;
+					background-color: $color-darkgray;
+					border-radius: 4px;
+					color: #fff;
+					font-size: 2rem;
+				}
+			}
+		}
+		// -商品説明リスト
+		.group-details {
+			margin-bottom: 15px;
+			padding-left: 0;
+			list-style: none;
+			font-size: 0;
+			li {
+				display: inline-block;
+				margin-right: 5px;
+				margin-bottom: 5px;
+				padding: 5px 10px;
+				background-color: $color-footergray;
+				border-radius: 4px;
+				color: #333;
+				font-size: 1.6rem;
+			}
+			.mounting-size {
+				padding-left: 10px;
+			}
+		}
+		// -詳細カタログページリンク
+		.group-catalog {
+			.detail-specifications, .option-list {
+				a {
+					position: relative;
+					display: block;
+					margin-bottom: 10px;
+					padding: 20px 10px 20px 30px;
+					background-color: $color-skyblue;
+					border-radius: 4px;
+					color: #fff;
+					font-size: 1.6rem;
+					&:hover, &:focus {
+						background-color: $color-skyblue80;
+					}
+					&::before {
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 5px;
+						width: 14px;
+						height: 14px;
+						margin: auto;
+						content: "";
+						vertical-align: middle;
+						border-top: 2px solid #fff;
+						border-right: 2px solid #fff;
+						-webkit-transform: rotate(45deg);
+						transform: rotate(45deg);
+					}
+					span.ext {
+						display: none;
+					}
+				}
+			}
+		}
+		// -ファイルダウンロード
+		.group-download {
+			h3 {
+				margin: 20px 0 15px 0;
+				padding: 0 0 0 15px;
+				border-left: solid 5px $color-logogreen;
+				color: #000;
+				font-size: 1.9rem;
+				@include MQ(XS) {
+					font-size: 1.7rem;
+				}
+			}
+			.dimension, .manual, .cad {
+				margin-bottom: 10px;
+				.file-icon {
+					display: none;
+				}
+				a {
+					position: relative;
+					display: block;
+					padding: 10px 10px 10px 50px;
+					background-color: $color-lightgray;
+					border-radius: 4px;
+					color: #fff;
+				  word-wrap : break-word;
+				  overflow-wrap : break-word;
+					@include MQ(XS) {
+						width: 100%;
+					}
+					&:hover, &:focus {
+						background-color: $color-lightgray80;
+					}
+					&::before {
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						width: 40px;
+						margin: auto;
+						padding-top: 8px;
+						vertical-align: middle;
+						text-align: center;
+						border-right: solid 1px #fff;
+						content: "\f019";
+						@include font-icon;
+						font-size: 20px;
+					}
+				}
+			}
+			.cad {
+				position: relative;
+				img {
+					display: none;
+				}
+				.file-size {
+					position: absolute;
+					top: 50%;
+					right: 10px;
+					transform: translateY(-50%);
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+/* Option ---------- */
+.node-sig-option.view-mode-index {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+.option-image {
+	width: 100%;
+	text-align: center;
+}
+h3.option-name {
+	width: 100%;
+	margin-top: 15px;
+	text-align: center;
+	font-size: 1.6rem;
+	color: $color-base;
+}
+.option-model, .option-price {
+	width: 40%;
+	@include MQ(SM) {
+		width: 50%;
+	}
+	@include MQ(XS) {
+		width: 20%;
+	}
+	@include MQ(XXS) {
+		width: 40%;
+	}
+}
+.option-price {
+	text-align: right;
+}

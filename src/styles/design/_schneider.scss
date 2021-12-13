@@ -1,0 +1,465 @@
+@charset "UTF-8";
+// 20180614 更新 imageパスを修正
+// メニュー ====================
+/* PC */
+nav.proface-nav ul.menu > li.menu-green > ul {
+  > li > {
+    a, span {
+      background-color: #009530;
+    }
+    a:hover, span:hover {
+      background-color: #3DCD58;
+    }
+    a, span {
+      border-top-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+  &.proface-dropdown-menu > li > ul.proface-dropdown-menu {
+    background-color: #3DCD58;
+    > li > a {
+      &:hover, &:focus {
+        background-color: #42B4E6;
+      }
+    }
+  }
+}
+
+/* SmartPhone */
+.proface-nav-xs ul.menu > li.menu-green {
+  background-color: #3DCD58;
+  > {
+    a, span {
+      border-left-color: #009530;
+    }
+  }
+  &:hover {
+    background-color: #009530;
+  }
+  &.opened {
+    background-color: #009530;
+    > {
+      a, span {
+        border-left: 1px solid #3DCD58;
+      }
+    }
+  }
+  > {
+    a:hover, span:hover {
+      border-left: 1px solid #3DCD58;
+    }
+  }
+  > ul > li {
+    background-color: #9FA0A4;
+  }
+  &.opend > ul > li {
+    background-color: #626469 !important;
+  }
+  > ul > li {
+    &:hover {
+      background-color: #626469 !important;
+      > a {
+        background-color: #626469 !important;
+      }
+    }
+    > a {
+      &:hover, &:focus {
+        background-color: #626469 !important;
+      }
+    }
+    > ul > li > a {
+      background-color: #FAFAFA;
+      &:hover {
+        background-color: #FFFFFF;
+      }
+    }
+  }
+}
+
+// Change Color ====================
+body.schneider {
+  .pane-page-content a {
+    color: #009530;
+  }
+  .pagination > {
+    li > {
+      a, span {
+        color: #009530;
+      }
+    }
+    .active > {
+      a {
+        background-color: #009530;
+        border-color: #009530;
+        color: white;
+        &:hover, &:focus {
+          background-color: #009530;
+          border-color: #009530;
+          color: white;
+        }
+      }
+      span {
+        background-color: #009530;
+        border-color: #009530;
+        color: white;
+        &:hover, &:focus {
+          background-color: #009530;
+          border-color: #009530;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+/********************************* 各ページ *******************************/
+// 共通見出し ====================
+body.schneider {
+  .product-related h2, .product-series-bottom-lists h2, .pane-relating-families-panel-pane-1 h2, .my-page h2, .user-account-info h3, .page-movie h2, .page-introduction h2, .page-details h2, .product-series-kanren-lists h2, .product-series-movie h2, .product-series-jirei h2 {
+    border-left: 5px solid #009530;
+  }
+  .page-features {
+    h2 {
+      border-left: 5px solid #009530;
+    }
+    h3 {
+      border-left: #009530 4px solid;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body.schneider {
+    .product-related h2, .product-series-bottom-lists h2, .pane-relating-families-panel-pane-1 h2, .my-page h2, .user-account-info h3, .page-movie h2, .page-introduction h2, .page-details h2, .product-series-kanren-lists h2, .product-series-movie h2, .product-series-jirei h2, .page-features h2 {
+      border-left: none;
+      background-image: none;
+      background-color: #009530;
+    }
+  }
+}
+
+// PRODUCT TOP ====================
+body.schneider {
+  .product_title {
+    color: #009530;
+    background: url(/sites/all/themes/proface/img-proface/product_title_bt.green.svg) left 0.26em no-repeat;
+    background-size: 0.8em 0.8em;
+  }
+  .prodcut-top-list-title {
+    color: #009530;
+    a {
+      color: #009530 !important;
+    }
+  }
+  .product-top-list-readmore a {
+    color: #0038a0 !important;
+  }
+  .node-type-prd-series-top h4 a:visited {
+    color: #0038a0;
+  }
+  .kanren-link a {
+    color: #009530 !important;
+    background: url(/sites/all/themes/proface/img/caret1.green.svg) left 0.25em no-repeat;
+    background-size: 10px;
+  }
+}
+
+// シリーズページ 事例 ====================
+body.schneider {
+  .product-series-jirei h4 {
+    color: #009530;
+  }
+  .product-series-kanren-lists .page-details-more-desc h4 {
+    color: #009530;
+    background: url(/sites/all/themes/proface/img-proface/product_title_bt.green.svg) left 0.26em no-repeat;
+    background-size: 0.8em;
+  }
+}
+
+// FAMILY ====================
+body.schneider {
+  .family-content .field-name-field-family-copy {
+    color: #009530;
+  }
+  .family-related-series-title {
+    color: #009530;
+    background: url(/sites/all/themes/proface/img-proface/product_title_bt.green.svg) left 0.26em no-repeat;
+    background-size: 0.8em;
+    a {
+      color: #009530 !important;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body.schneider .family-related-series-title a {
+    color: #009530 !important;
+  }
+}
+
+// 製品仕様・バリエーション
+// .page-specifications
+// .page-variations ====================
+body.schneider .page-specifications fieldset .panel-heading,
+body.schneider .page-variations fieldset .panel-heading {
+  border-bottom: 3px solid #009530!important;
+}
+
+// 各詳細ページ最下部のお問い合せ部 panel-pane ====================
+// ここだけ h3 が特殊
+body.schneider .panel-pane-otoiawase h3 {
+  color: #009530;
+  border-top: #009530 2px solid;
+}
+
+// 詳細ページの下部にある関連するものリスト　最大2個 ====================
+body.schneider .page-details-more-desc h4 {
+  color: #009530;
+  a {
+    color: #009530 !important;
+  }
+}
+
+// From custom.css ====================
+body.schneider .itemized_link li {
+  background: url(/sites/all/themes/proface/img-proface/feature_list1_bt.green.svg) left 0.33em no-repeat;
+  background-size: 0.9em 0.9em;
+  span.gray {
+    color: #333333;
+  }
+  a {
+    color: #009530;
+    &:hover {
+      color: #3DCD58;
+    }
+  }
+}
+
+// 追従メニュー ====================
+body.schneider {
+  .link_tab {
+    li {
+      background: url(/sites/all/themes/proface/img-proface/link_tab_bg_off.png) center top no-repeat;
+      &.roll {
+        a {
+          color: #009530;
+        }
+        background: url(/sites/all/themes/proface/img-proface/link_tab_bg_on.png) center top no-repeat;
+      }
+    }
+    .on {
+      color: #009530;
+      background: url(/sites/all/themes/proface/img-proface/link_tab_bg_on.png) center top no-repeat;
+    }
+  }
+  .link_tab2 li {
+    background: url(/sites/all/themes/proface/img-proface/link_tab2_bg_off.png) center bottom no-repeat;
+  }
+  .link_tab2 li.roll {
+    background: url(/sites/all/themes/proface/img-proface/link_tab2_bg_on.png) center bottom no-repeat;
+  }
+}
+
+body.schneider {
+  .link_table li a {
+    background: url(/sites/all/themes/proface/img-proface/link_table_bt.green.svg) 0px 8px no-repeat;
+    background-size: 10px 10px;
+  }
+  .attention1 {
+    color: #4d4d4d;
+    background: url(/sites/all/themes/proface/img-proface/attention_bg.svg) #f9e9da 10px 0.73em no-repeat;
+    background-size: 18px 18px;
+  }
+  .attention2 {
+    color: #4d4d4d;
+    border: #f9e9da 1px solid;
+    dt {
+      color: #4d4d4d;
+      background: url(/sites/all/themes/proface/img-proface/attention_bg.svg) #f9e9da 10px 0.71em no-repeat;
+      background-size: 18px 18px;
+    }
+    dd p.red {
+      color: #ff0000;
+    }
+  }
+  .note {
+    color: #4d4d4d;
+    background: url(/sites/all/themes/proface/img-proface/note_bt.svg) 0px 1.2em no-repeat;
+    background-size: 9px 9px;
+    border-top: #cfd7eb 1px solid;
+    border-bottom: #cfd7eb 1px solid;
+  }
+}
+
+// page_link
+// 2014/12/17追加 - 2016/02/08 page_link_high_oldに改名
+body.schneider .page_link_high_old {
+  color: #009530;
+}
+
+body.schneider .page_link_med a {
+  background: #009530;
+  border: 1px solid #009530;
+  color: white;
+  &:hover {
+    color: #009530;
+    border: 1px solid #009530;
+    background-color: white;
+  }
+}
+
+body.schneider .page_link_low a {
+  color: #009530;
+  border: 1px solid #009530;
+  &:hover {
+    color: white;
+    background: #009530;
+    border: 1px solid #009530;
+  }
+}
+
+body.schneider .page_link_exlow {
+  color: #009530;
+  background: url(/sites/all/themes/proface/img-proface/feature_list1_bt.green.svg) left 0.33em no-repeat;
+  background-size: 0.9em 0.9em;
+  a {
+    color: #009530;
+    &:hover {
+      color: #009530;
+    }
+  }
+}
+
+body.schneider .status_high {
+  background-color: #40BF8C;
+  border: 1px solid #40bf8c;
+}
+
+body.schneider .view360 a {
+  background: url(/sites/all/themes/proface/img-proface/360_w.svg) 8px center no-repeat #009530;
+  background-size: 1.4em 1.4em;
+  border: 1px solid #009530;
+  color: white;
+  &:hover {
+    background-image: url(/sites/all/themes/proface/img-proface/360_green.svg);
+    color: #009530;
+    background-color: white;
+    border: 1px solid #009530;
+  }
+}
+
+// 追加分 20160114 フジタ
+// 20160208 更新 page_link_highex -> page_link_highに変更
+// 20180614 更新 imageパスを修正 ====================
+body {
+  &.schneider a.page_link_high, &.schneidar a.page_link_highex {
+    background: url(/sites/all/themes/proface/img/shevron-right-green.svg) no-repeat 7px 0.65em #fff;
+    background-size: 10px 10px;
+    color: #009530;
+    border: 1px solid #009530;
+  }
+  &.schneider a.page_link_high:hover, &.schneidar a.page_link_high:focus, &.schneider a.page_link_highex:hover, &.schneidar a.page_link_highex:focus {
+    background-image: url(/sites/all/themes/proface/img/shevron-right-white.svg);
+    background-color: #009530;
+    color: white;
+  }
+  &.schneider p.page_link_high a {
+    background: url(/sites/all/themes/proface/img/shevron-right-blue.svg) no-repeat 7px 0.65em #fff;
+    font-size: 1.5rem;
+    color: #009530;
+    border: 1px solid #009530;
+    &:hover {
+      background-image: url(/sites/all/themes/proface/img/shevron-right-white.svg);
+      background-color: #009530;
+    }
+  }
+  &.schneidar p.page_link_high a:focus {
+    background-image: url(/sites/all/themes/proface/img/shevron-right-white.svg);
+    background-color: #009530;
+  }
+}
+
+body.schneider dl.text-box {
+  dt {
+    background-color: #009530;
+  }
+  dd {
+    border: 1px solid #009530;
+  }
+}
+
+body.schneider .related_info {
+  color: #009530;
+  background: url(/sites/all/themes/proface/img-proface/related_info_bt.green.svg) left 0.2em no-repeat;
+  background-size: 0.8em 0.8em;
+}
+
+// Proface Table Simple ====================
+body.schneider {
+  .proface-table-simple th {
+    color: #009530;
+  }
+  .proface-table-color {
+    .pt-ora {
+      th, td {
+        background: rgba(240, 131, 0, 0.5);
+      }
+    }
+    .pt-eme {
+      th, td {
+        background: rgba(75, 187, 180, 0.5);
+      }
+    }
+    .pt-gre {
+      th, td {
+        background: rgba(184, 210, 0, 0.5);
+      }
+    }
+  }
+  .remarks-data a {
+    color: #009530 !important;
+  }
+  .free-html h2, .h2 {
+    border-left: 5px solid #009530;
+  }
+}
+@media (max-width: 767px) {
+	body.schneider .free-html h2, .h2 {
+	  border-left: none;
+		background-image: none;
+		background-color: #009530;
+	}
+}
+
+body.schneider .free-html h3, .h3 {
+  color: #000;
+  border-left: #009530 5px solid;
+}
+
+body.schneider .free-html h4, .h4 {
+  background: url(/sites/all/themes/proface/img-proface/h5_bt.green.svg) left 0.35em no-repeat;
+  background-size: 0.6em 0.6em;
+}
+
+body.schneider .free-html h5, .h5 {
+  background: url(/sites/all/themes/proface/img-proface/h6_bt.green.svg) left 0.35em no-repeat;
+  background-size: 0.6em 0.6em;
+}
+
+body.schneider {
+  .link_title li, .feature_list1 dt, .feature_list2 dt {
+    color: #009530;
+    border-left: #009530 4px solid;
+  }
+  .feature_list1 dd ul li, .feature_list2 dd ul li {
+    background: url(/sites/all/themes/proface/img-proface/feature_list1_bt.green.svg) left 0.33em no-repeat;
+    background-size: 0.9em 0.9em !important;
+  }
+  .feature_list1 dd ul li a, .feature_list2 dd ul li a {
+    color: #333333;
+  }
+  .item-blue {
+    background: url(/sites/all/themes/proface/img-proface/h6_bt.green.svg) left 0.45em no-repeat;
+    background-size: 0.6em 0.6em;
+  }
+}
+

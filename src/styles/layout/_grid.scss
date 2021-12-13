@@ -1,0 +1,40 @@
+@charset "UTF-8";
+// custom.scssから移動
+.Lbox {
+  float: left; width: 150px;
+  text-align: center;
+}
+.Rbox {
+  float: right;
+  width: 290px;
+}
+.Rbox2 {
+  float: right;
+  width: 270px;
+}
+
+// custom.scssから移動
+/* カラムの下に隙間を作る */
+.free-html .col-xs-1, .free-html .col-sm-1, .free-html .col-md-1, .free-html .col-lg-1, .free-html .col-xs-2, .free-html .col-sm-2, .free-html .col-md-2, .free-html .col-lg-2, .free-html .col-xs-3, .free-html .col-sm-3, .free-html .col-md-3, .free-html .col-lg-3, .free-html .col-xs-4, .free-html .col-sm-4, .free-html .col-md-4, .free-html .col-lg-4, .free-html .col-xs-5, .free-html .col-sm-5, .free-html .col-md-5, .free-html .col-lg-5, .free-html .col-xs-6, .free-html .col-sm-6, .free-html .col-md-6, .free-html .col-lg-6, .free-html .col-xs-7, .free-html .col-sm-7, .free-html .col-md-7, .free-html .col-lg-7, .free-html .col-xs-8, .free-html .col-sm-8, .free-html .col-md-8, .free-html .col-lg-8, .free-html .col-xs-9, .free-html .col-sm-9, .free-html .col-md-9, .free-html .col-lg-9, .free-html .col-xs-10, .free-html .col-sm-10, .free-html .col-md-10, .free-html .col-lg-10, .free-html .col-xs-11, .free-html .col-sm-11, .free-html .col-md-11, .free-html .col-lg-11, .free-html .col-xs-12, .free-html .col-sm-12, .free-html .col-md-12, .free-html .col-lg-12 {
+  margin-bottom:0px;
+}
+
+@media (max-width: 767px) {
+  .free-html .col-xs-1, .free-html .col-sm-1, .free-html .col-md-1, .free-html .col-lg-1, .free-html .col-xs-2, .free-html .col-sm-2, .free-html .col-md-2, .free-html .col-lg-2, .free-html .col-xs-3, .free-html .col-sm-3, .free-html .col-md-3, .free-html .col-lg-3, .free-html .col-xs-4, .free-html .col-sm-4, .free-html .col-md-4, .free-html .col-lg-4, .free-html .col-xs-5, .free-html .col-sm-5, .free-html .col-md-5, .free-html .col-lg-5, .free-html .col-xs-6, .free-html .col-sm-6, .free-html .col-md-6, .free-html .col-lg-6, .free-html .col-xs-7, .free-html .col-sm-7, .free-html .col-md-7, .free-html .col-lg-7, .free-html .col-xs-8, .free-html .col-sm-8, .free-html .col-md-8, .free-html .col-lg-8, .free-html .col-xs-9, .free-html .col-sm-9, .free-html .col-md-9, .free-html .col-lg-9, .free-html .col-xs-10, .free-html .col-sm-10, .free-html .col-md-10, .free-html .col-lg-10, .free-html .col-xs-11, .free-html .col-sm-11, .free-html .col-md-11, .free-html .col-lg-11, .free-html .col-xs-12, .free-html .col-sm-12, .free-html .col-md-12, .free-html .col-lg-12 {
+    margin-bottom: 20px;
+  }
+}
+
+// Common flex layout ===================
+// add.scss 7
+.row-flex {
+	display: flex;
+}
+.col-flex-item {
+	flex: 1 1 0%;
+}
+
+// Common grid layout ====================
+.row-grid {
+  display: grid;
+}

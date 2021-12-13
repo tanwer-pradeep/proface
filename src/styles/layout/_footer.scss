@@ -1,0 +1,282 @@
+@charset "UTF-8";
+//style.scssから移動
+// Footer ====================
+.footer-wrapper {
+    margin-top: 40px;
+}
+
+footer {
+  overflow: hidden;
+  position: relative;
+  color: #202020;
+
+}
+
+.footer-main {
+  background: #eee;
+  padding: 12px 0;
+}
+
+.proface-layouts-footermain {
+  position: relative;
+}
+
+.footer-arc {
+    width: 132px;
+    height: 316px;
+    position: absolute;
+    left: 0;
+    top: -62px;
+    background: url(/sites/all/themes/proface/img/arc-min.png) no-repeat bottom left;
+    background-size: 122px;
+    opacity: 0.4;
+}
+.footer-sub {
+  background: #151515;
+  min-height: 52px;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1.4;
+  padding: 18px 10px;
+  box-sizing: border-box;
+}
+
+.footer-sub p {
+  margin:0;
+}
+
+.footer-sub a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-sub a:visited {
+  color: #fff;
+}
+
+footer div.pane-title {
+  color: #202020;
+  font-size: 1.8rem;
+  margin: 0;
+  padding: 5px 0 0 40px;
+  background: url(/sites/all/themes/proface/img/question.svg) no-repeat left center;
+  background-size: 30px;
+  min-height: 30px;
+  line-height: 1.2;
+  margin-top: 12px;
+}
+
+footer form {
+  width: 100%;
+  max-width: 500px;
+  height: 40px;
+  position: relative;
+  margin-top: 10px;
+}
+@media (max-width: 767px) {
+  footer form {
+    max-width: 100%;
+  }
+}
+
+footer form input {
+  &[type='text'] {
+    border: none;
+    padding: 6px 45px 6px 6px;
+    width: 100%;
+    height: 40px;
+    &:hover, &:focus {
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+      outline: none;
+      border: 1px solid #1DAEFF;
+    }
+  }
+  &[type='submit'] {
+    background: url(/sites/all/themes/proface/img/magnify.png) center center no-repeat #a0a0a0;
+    border: none;
+    text-indent: 40px;
+    background-size: 20px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    &:hover, &:focus {
+      background-color: #0051a6;
+    }
+  }
+}
+
+footer .menu-name-menu-footer-menu ul {
+  margin-top: 60px;
+  margin-bottom: 0;
+  display: block;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  li {
+    padding: 0px 17px 0 0;
+    margin: 0 17px 0 0;
+    display: block;
+    float: left;
+    border-right: 1px solid #d0d0d0;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
+    a {
+      display: block;
+      color: #202020;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+footer .pane-menu-social-link ul.menu {
+  padding: 0;
+  margin: 50px 0 0 0;
+  overflow: hidden;
+  font-size: 0;
+  text-align: right;
+  li {
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 20px;
+    &:first-child {
+      margin-left: 0;
+    }
+    a {
+      display: block;
+      text-indent: 100%;
+      width: 40px;
+      height: 40px;
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+}
+
+footer a {
+  &.menu-link-facebook {
+    background: url(/sites/all/themes/proface/img/facebook.svg) center center;
+    background-size: 40px;
+  }
+  &.menu-link-twitter {
+    background: url(/sites/all/themes/proface/img/twitter.svg) center center;
+    background-size: 40px;
+  }
+  &.menu-link-linkedin {
+    background: url(/sites/all/themes/proface/img/linkedin.svg) center center;
+    background-size: 40px;
+  }
+  &.menu-link-youtube {
+    background: url(/sites/all/themes/proface/img/youtube.svg) center center;
+    background-size: 40px;
+  }
+  &.menu-link-naverblog {
+    background: url(/sites/all/themes/proface/img/naverblog.png) center center;
+    background-size: 40px;
+  }
+}
+
+footer .pane-custom a {
+  display: block;
+  text-indent: 100%;
+  width: 200px;
+  height: 44px;
+  background: url(/sites/all/themes/proface/img/LiO_HPro-face_RGB-min.png) center center no-repeat;
+  background-size: 211px;
+  margin-top: 29px;
+  overflow: hidden;
+  float: right;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-arc {
+    width: 164px;
+    height: 443px;
+    left: 6px;
+    top: 0px;
+    background-size: 164px;
+    opacity: 0.13;
+  }
+  footer {
+    min-width: 0;
+    h2 {
+      font-size: 1.6rem;
+      background-size: 28px;
+    }
+    .menu-name-menu-footer-menu ul {
+      margin-top: 20px;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 10px 0;
+      text-align: center;
+      li {
+        padding: 0 !important;
+        border-right: none !important;
+        float: none;
+        display: inline-block;
+        a {
+          font-size: 1.2rem;
+          padding: 4px 8px;
+        }
+      }
+    }
+    .pane-menu-social-link ul.menu {
+      margin: 18px 0 8px 0;
+      text-align: center;
+    }
+    .pane-custom a {
+      background-size: 211px;
+      float: none;
+      margin: 14px auto 14px;
+    }
+  }
+  .footer-sub {
+    text-align: center;
+  }
+}
+
+// トップに戻るボタン ====================
+#backtotop {
+  position: fixed;
+  bottom: -45px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background: url(/sites/all/themes/proface/img/searchbar_bg-min.png) center center;
+  background-size: 1001px;
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  line-height: 41px;
+  transition: 0.1s;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  box-shadow: -2px 0 2px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+  &:after {
+    content: "\f106";
+    font-family: 'fontawesome';
+    color: #fff;
+    font-size: 36px;
+  }
+  &:hover {
+    opacity: 1 !important;
+  }
+  &.btt-show {
+    bottom: 99px;
+    transition: 0.3s;
+  }
+}

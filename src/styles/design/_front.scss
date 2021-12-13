@@ -1,0 +1,452 @@
+@charset "UTF-8";
+// custom.scssから移動
+// top page news block hight ====================
+.page-home .center-wrapper .pane-views.pane-news,
+.page-home .center-wrapper .panel-pane.pane-node {
+  height: 385px;
+}
+
+.panel-2col-stacked .panel-col-last .inside {
+  margin-right: 12px;
+}
+
+// TOPページの更新情報ブロックの新着表示幅調整20150317sakata* ====================
+.view-display-id-block_1 .views-field-title {
+  width: 83%;
+}
+.view-news.view-display-id-block_1 .views-field-title {
+  margin-left: 6.5em;
+}
+
+// トップページ　検索・ダウンロードボタン ====================
+// add.scss 1202
+.pane-fullwidth {
+  background: url(/sites/all/themes/proface/img/searchbar_bg-min.png) center center;
+  padding: 20px 0;
+  .pane-front-bar {
+    position: relative;
+  }
+}
+.pane-front-bar, // 海外サイト 削除予定
+.pane-front-bar-with-download {
+  // 日本語サイト
+  .proface-plain {
+    display: flex;
+    align-items: flex-end;
+    @include MQ(SM) {
+      flex-wrap: wrap;
+    }
+  }
+}
+// 検索フォーム
+.pane-front-bar-with-download {
+  .lazy-pane-wrapper,
+  .pane-search-form {
+    flex: 1 1 0;
+    @include MQ(SM) {
+      flex: auto;
+    }
+    @include MQ(XS) {
+      display: none;
+    }
+  }
+  // 日本語サイト
+  .lazy-pane-wrapper {
+    .pane-search-form {
+      flex: none;
+    }
+  }
+}
+// ダウンロードボタン
+.pane-download-icon-download-icon {
+  flex: 3.2 1 0;
+  @include MQ(SM) {
+    flex: auto;
+  }
+  h2 {
+    margin: 0 0 5px;
+    color: #fff;
+    font-size: 14px;
+  }
+}
+.view-display-id-download_icon {
+  .view-content {
+    display: flex;
+    @include MQ(XS) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  .views-row {
+    margin-left: 5px;
+    &.views-row-first {
+      margin-left: 0;
+    }
+    @include MQ(XS) {
+      margin-bottom: 10px;
+      width: 32%;
+      text-align: center;
+      &:nth-child(3n + 1) {
+        margin-left: 0;
+      }
+    }
+    @include MQ(XXS) {
+      width: 50%;
+      margin-left: 0;
+    }
+  }
+}
+// 海外・日本語サイト共通 検索フォーム
+.pane-fullwidth form {
+  width: auto;
+  position: relative;
+  margin-right: 20px;
+  @include MQ(XS) {
+    .pane-fullwidth form {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  input[type="text"] {
+    border: none;
+    padding: 6px 45px 6px 6px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #fff;
+    &:hover,
+    &:focus {
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+      outline: none;
+      border: 1px solid #1daeff;
+    }
+  }
+  input[type="submit"] {
+    background: url(/sites/all/themes/proface/img/magnify.png) center center no-repeat #a0a0a0;
+    border: none;
+    text-indent: 40px;
+    background-size: 20px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    &:hover,
+    &:focus {
+      background-color: rgb(240, 131, 0);
+    }
+  }
+}
+// 海外サイト 検索フォーム
+.pane-front-bar {
+  .lazy-pane-wrapper {
+    &:first-child {
+      flex: 1;
+    }
+  }
+}
+// 海外サイト ロイグイン時の検索フォーム（ログイン・ログアウトボタン無し）
+.logged-in {
+  .pane-fullwidth .pane-front-bar form {
+    margin-right: 0;
+  }
+}
+
+// 海外サイト アノニマス時のログイン・ログアウトボタン
+.pane-menu-front-user-menu {
+  .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    font-size: 0;
+    white-space: nowrap;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        width: 160px;
+        height: 40px;
+        line-height: 38px;
+        border: 2px solid #fff;
+        background-color: transparent;
+        text-align: center;
+        font-size: 1.45rem;
+        color: #fff;
+        transition: 0.2s;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+    // ログイン
+    .front-user-menu-button-login {
+      margin-right: 20px;
+      a {
+        background-color: rgb(240, 131, 0);
+        border-color: rgb(240, 131, 0);
+        &:hover,
+        &:focus {
+          background-color: rgb(255, 158, 41);
+          border-color: rgb(255, 158, 41);
+        }
+      }
+    }
+    // 不明なボタン
+    .front-user-menu-button-inquiry {
+      &:hover,
+      &:focus {
+        background-color: #fff;
+        color: #444;
+      }
+    }
+  }
+}
+
+// 日本語サイト スライダー ====================
+// slider ----------
+.slick-slider {
+  margin-bottom: 0;
+  @include MQ(SM) {
+    background-color: #f8f8f8;
+  }
+}
+.slick-dots {
+  bottom: 0;
+  @include MQ(SM) {
+    position: static;
+    margin-bottom: 0;
+    padding: 0 10px 10px;
+  }
+  li button::before {
+    font-size: 14px;
+    color: #fff;
+    opacity: 1;
+    @include MQ(SM) {
+      color: #666;
+    }
+  }
+  li.slick-active button::before {
+    color: $color-blue-main;
+    opacity: 1;
+  }
+}
+.views-field-field-top-slider-image {
+  .field-content {
+    position: relative;
+    top: 0;
+    left: 50%;
+    width: 260%;
+    height: 100%;
+    margin-left: -130%;
+    z-index: 5;
+    @include MQ(SM) {
+      left: 28%;
+    }
+  }
+}
+
+.views-field-field-top-slider-text {
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  padding: 15px;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  @media screen and (min-width: 1600px) {
+    left: 15%;
+    width: 28%;
+  }
+  @media only screen and (min-width: 1400px) and (max-width: 1599px) {
+    left: 10%;
+    width: 30%;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1399px) {
+    left: 5%;
+    width: 35%;
+  }
+  @include MQ(SM) {
+    position: static;
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+    color: #333;
+  }
+  @include MQ(XS) {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+  }
+  h2 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    font-size: 20px;
+    color: #fff;
+    @include MQ(SM) {
+      color: #333;
+    }
+    @include MQ(XS) {
+      font-size: 18px;
+    }
+  }
+  .field-content > div {
+    margin-bottom: 10px;
+  }
+  a.page_link_high {
+    position: relative;
+    margin: 0 0 5px 0 !important;
+    background-color: $color-orange;
+    background-image: none;
+    border: none;
+    color: #fff;
+    &:first-child {
+      margin-left: 0 !important;
+    }
+    &::before {
+      position: absolute;
+      top: 11px;
+      left: 6px;
+      width: 8px;
+      height: 8px;
+      content: "";
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+
+// 日本語サイト おすすめ情報 ====================
+// add.scss 1444
+// h2タイトル
+.front {
+  .pane-main-content {
+    .pane-title {
+      margin: 25px 0 30px 0;
+      text-align: center;
+      color: #2f2f2f;
+      font-size: 3rem;
+      @include MQ(XS) {
+        margin: 20px -15px 15px -15px;
+        padding: 10px 0;
+        background: url(/sites/all/themes/proface/img/searchbar_bg-min.png) center center;
+        background-size: 1300px;
+        color: #fff;
+        font-size: 2rem;
+      }
+      a {
+        color: #2f2f2f;
+        @include MQ(XS) {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+// おすすめ情報本文
+.paragraphs-item-title-with-large-picture,
+.paragraphs-item-title-with-small-picture,
+.paragraphs-item-title-with-small-picture {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: dotted 1px #ccc;
+  @include MQ(XXS) {
+    margin-bottom: 0px;
+    padding-bottom: 15px;
+    border-bottom: none;
+  }
+  .col-flex-item {
+    padding-right: 15px;
+    padding-left: 15px;
+    border-left: dotted 1px #ccc;
+    &:first-child {
+      padding-left: 0;
+      border-left: none;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    @include MQ(XXS) {
+      padding: 15px 0;
+      border-left: none;
+      border-bottom: dotted 1px #ccc;
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+  .topic-img-wrapper {
+    a img {
+      backface-visibility: hidden;
+    }
+  }
+}
+.paragraphs-item-only-title {
+  .col-flex-item {
+    display: flex;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px 5px;
+    border: solid 1px $color-link;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    .field-type-entityreference {
+      align-self: center;
+    }
+    @include MQ(XXS) {
+      display: block;
+      margin: 0 0 15px 0;
+    }
+  }
+}
+.topic-img-wrapper {
+  margin-bottom: 15px;
+}
+.field-name-field-topic-link {
+  margin-bottom: 5px;
+  a {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+    }
+    &::before {
+      top: 2px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background-color: $color-link;
+    }
+    &::after {
+      position: absolute;
+      top: 5px;
+      left: 2px;
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+.field-type-paragraphs {
+  .row-flex {
+    @include MQ(XXS) {
+      flex-direction: column;
+    }
+  }
+}

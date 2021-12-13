@@ -1,13 +1,5 @@
-# steps to start 
-1. clone repo
-2. npm install
-3. npm start
-## Available Scripts
+## Getting started
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
+1. Install dependencies using `yarn install`
+2. Start the local development server using `yarn start`
+3. Build the project using `yarn build` to generate the bundle in `dist/bundle.min.js`

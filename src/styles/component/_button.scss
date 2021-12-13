@@ -1,0 +1,132 @@
+@charset "UTF-8";
+// style.scssから移動
+// 基本設定 ====================
+.btn-center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.button {
+  border: 2px;
+  width: 160px;
+  height: 40px;
+  border-radius: 0;
+}
+
+// 角丸ボタン 基本
+.btn_round {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+
+// 共通ボタン ====================
+// ダウンロードボタン
+.proface-btn-download {
+  color: #fff !important;
+  border: none;
+  background-color: #f18730;
+  background-image: url(/sites/all/themes/proface/img/ico-download.svg) !important;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 22px 22px;
+  padding-left: 43px;
+  transition: 0.2s;
+  &:hover,
+  &:focus {
+    background-color: #c35903;
+  }
+}
+
+.btn_proface-primary {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 5rem;
+  background-color: $color-link;
+  border: 1px solid $color-link;
+  border-radius: 4px;
+  color: #fff;
+  &:visited {
+    color: #fff;
+  }
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    border: 1px solid $color-link;
+    color: $color-link;
+    text-decoration: none;
+  }
+  // arrow
+  &.btn_arrow-left-in,
+  &.btn_arrow-left-out,
+  &.btn_arrow-right-in,
+  &.btn_arrow-right-out {
+    &::before {
+      position: absolute;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      margin-top: -4px;
+      content: "";
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+    }
+    &:hover,
+    &:focus {
+      &::before {
+        border-color: $color-link;
+      }
+    }
+  }
+  // 左端
+  &.btn_arrow-left-in,
+  &.btn_arrow-left-out {
+    &::before {
+      left: 1rem;
+    }
+  }
+  // 右端
+  &.btn_arrow-right-in,
+  &.btn_arrow-right-out {
+    &::before {
+      right: 1rem;
+    }
+  }
+  // 左端 >
+  &.btn_arrow-left-in {
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+  // 左端 <
+  &.btn_arrow-left-out {
+    &::before {
+      transform: rotate(225deg);
+    }
+  }
+  // 右端 <
+  &.btn_arrow-right-in {
+    &::before {
+      transform: rotate(225deg);
+    }
+  }
+  // 右端 >
+  &.btn_arrow-right-out {
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+// cookie accept ====================
+#sliding-popup {
+  &.sliding-popup-bottom {
+    background: #0051a6 !important;
+  }
+  .popup-content #popup-buttons button {
+    border-radius: 0 !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

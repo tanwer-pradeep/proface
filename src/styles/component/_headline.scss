@@ -1,0 +1,184 @@
+// style.scssから移動
+.pane-page-title h1 {
+  margin-bottom: 24px;
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  font-size: 34px;
+}
+@media (max-width: 767px){
+  .pane-page-title h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 480px){
+  .pane-page-title h1 {
+    font-size: 27px;
+  }
+}
+
+// custom.scssから移動
+.free-html h2, .h2 {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding-top: 6px;
+  padding-bottom: 9px;
+  padding-left: 22px;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid #ccc;
+  border-left: 5px solid $color-blue-main;
+  color: #4d4d4d;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 767px) {
+  .free-html h2, .h2 {
+    margin: 20px -15px 20px -15px;
+    background: url(/sites/all/themes/proface/img/searchbar_bg-min.png) center center;
+    background-size: 1300px;
+    padding: 10px 15px;
+    text-align: center;
+    border:none;
+    color: #fff;
+    font-size: 2.0rem;
+  }
+  .free-html h2 > a, .h2 > a {
+    color: #fff;
+  }
+}
+
+.free-html h3, .h3 {
+  margin: 40px 0 30px 0;
+  padding: 0 0 0 15px;
+  border-left: $color-blue-fun 5px solid;
+  color: #000;
+  font-size: 1.9rem;
+}
+
+.free-html h4:first-child, .h4:first-child,
+.free-html h5:first-child, .h5:first-child,
+.free-html h6:first-child, .h6:first-child {
+  margin-top:0;
+ }
+  
+.free-html h4, .h4 {
+  padding: 0px 0 0 1.1em;
+  background: url(/sites/all/themes/proface/img-proface/h5_bt.svg) left 0.35em no-repeat;
+  background-size: 0.6em 0.6em;
+  color: #000;
+  font-size: 1.8rem;
+}
+
+.free-html h5, .h5 {
+  padding: 0px 0 0 1.1em;
+  background: url(/sites/all/themes/proface/img-proface/h6_bt.svg) left 0.35em no-repeat;
+  background-size: 0.6em 0.6em;
+  color: #000;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 767px) {
+  .free-html h3, .h3 {
+    font-size: 1.7rem;
+  }
+  .free-html h4, .h4 {
+    font-size: 1.7rem;
+  }
+}
+
+/***** 共通見出し *****/
+.product-related h2,
+.product-series-bottom-lists h2,
+.pane-relating-families-panel-pane-1 h2,
+.my-page h2,
+.user-account-info h3,
+.page-movie h2,
+.page-introduction h2,
+.page-details h2,
+.product-series-kanren-lists h2 ,
+.product-series-movie h2,
+.product-series-jirei h2,
+.page-features h2 {
+  color: #4d4d4d;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border: none;
+  font-size: 30px;
+  border-left: 5px solid #0051a6;
+  padding-left: 22px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 9px;
+  padding-top: 6px;
+  font-size: 25px;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+
+.page-features h3 {
+  color: #4d4d4d;
+  font-size: 1.8rem;
+  padding: 0 10px;
+  border-left: #005bac 4px solid;
+  margin: 40px 0 30px 0;
+}
+
+@media (max-width: 767px) {
+  .product-related h2,
+  .product-series-bottom-lists h2,
+  .pane-relating-families-panel-pane-1 h2,
+  .my-page h2,
+  .user-account-info h3,
+  .page-movie h2,
+  .page-introduction h2,
+  .page-details h2,
+  .product-series-kanren-lists h2,
+  .product-series-movie h2,
+  .product-series-jirei h2,
+  .page-features h2 {
+    font-size: 2.0rem;
+    margin: 20px -15px 20px -15px;
+    background: url(/sites/all/themes/proface/img/searchbar_bg-min.png) center center;
+    background-size: 1300px;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    border:none;
+  }
+
+  .page-features h3 {
+    font-size: 1.7rem;
+  }
+}
+
+// title ====================
+.product_title {
+  color: #0051a6;
+	font-size: 1.8rem;
+  background: url(/sites/all/themes/proface/img-proface/product_title_bt.svg) left 0.26em no-repeat;
+  padding: 0px 0 0 1.5em;
+  margin: 0px;
+  background-size: 0.8em 0.8em;
+  line-height: 1.3;
+}
+
+.related_info {
+  color: #0051a6;
+  font-size: 1.8rem;
+  background: url(/sites/all/themes/proface/img-proface/related_info_bt.svg) left 0.2em no-repeat;
+  padding: 0px 0 0 1.3em;
+  margin: 10px 0 10px 0!important;
+  background-size: 0.8em 0.8em;
+  line-height: 1.2em;
+}
+
+// solution details h2 title
+.node-type-solution-details {
+  .pane-custom-node-title h1 {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #000;
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,12 @@
+@charset "UTF-8";
+// #7403 ダウンロードページ：コンテンツタイプ40-01_Download ====================
+// _add.scss 1193
+//! label h2 -------
+.group-dwn-comment,
+.group-dwn-free,
+.group-dwn-term-condition,
+.group-dwn-download-files {
+	h2 {
+    @include HL2;
+	}
+}
