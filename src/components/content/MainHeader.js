@@ -1,6 +1,11 @@
 import React from "react";
+import Temp from "../../../Temp";
 
-const MainHeader = () => {
+
+
+
+
+const MainHeader = ({data}) => {
   return (
     <>
       <div className="header-wrapper">
@@ -68,10 +73,12 @@ const MainHeader = () => {
                         <div className="pane-content">
                           <div className="menu-block-wrapper menu-block-ctools-main-menu-1 menu-name-menu-main-menu-global-en parent-mlid-0 menu-level-1">
                             <ul className="menu">
-                              <li className="first leaf menu-mlid-3472 menu-link-home menu-link-home">
+                              {/* <li className="first leaf menu-mlid-3472 menu-link-home menu-link-home">
                                 <a href="/en">Home</a>
-                              </li>
-                              <li className="expanded menu-mlid-3473 menu-link-products">
+                              </li> */}
+                              <Temp data={data} />
+                            </ul>
+                              {/*<li className="expanded menu-mlid-3473 menu-link-products">
                                 <span className="nolink">Products</span>
                                 <ul className="proface-dropdown-menu">
                                   <li className="first expanded menu-mlid-3835 dropdown menu-link-hmi">
@@ -603,7 +610,7 @@ const MainHeader = () => {
                                   </li>
                                 </ul>
                               </li>
-                            </ul>
+                            </ul> */}
                           </div>
                         </div>
                       </div>
